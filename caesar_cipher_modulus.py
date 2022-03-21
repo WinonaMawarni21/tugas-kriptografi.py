@@ -1,8 +1,3 @@
-#rumus enkripsi = (n - key) % 26
-#rumus dekripsi = (n + key) % 26
-#n = merupakan urutan dari abjad yang diinput 
-#key = merupakan kunci dekripsi atau enkripsi
-#26 =merupakan jumlah dari seluruh abjad
 print(" Progam Enkripsi Caesar ")
 abjad = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'] 
 
@@ -17,7 +12,7 @@ def enkripsi(abjad):
     for char in kalimat: 
       if char in abjad: 
         n = abjad.index(char)
-        encrypt = (n - key) % 26 
+        encrypt = (n + key) % 26 
         convert = abjad[encrypt] 
         hasil = hasil + convert 
       else:
@@ -36,7 +31,7 @@ def dekripsi(abjad):
     for char in kalimat: 
         if char in abjad: 
           n = abjad.index(char) 
-          encrypt = (n + key) % 26 
+          encrypt = (n - key) % 26 
           convert = abjad[encrypt] 
           hasil = hasil + convert 
         else:
